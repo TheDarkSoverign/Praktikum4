@@ -54,12 +54,25 @@ level_2 = Level()
 
 level_2.set_back('jungle.png')
 
-level_2.set_hero(300, 350)
-level_2.min_x = 0 
+level_2.set_hero(200, 450)
+level_2.min_x = 0
 level_2.max_x = win_width * 15
 
-level_2.add_enemy(0, 650, 100, 30, 900, 4)
-level_2.add_platform(0, 550, 300, 100, 35, 0, 0)
-level_2.set_goal(1000, 380)
+# Добавляем врагов с разными скоростями и типами
+level_2.add_enemy(0, 650, 300, 550, 800, 2)
+level_2.add_enemy(0, 1050, 100, 1000, 1300, 0)
+level_2.add_enemy(1, 1600, 50, 1500, 1800, 4)
+
+# Добавляем платформы разной высоты
+level_2.add_platform(100, 550, 300, 100, 10, 0, 0)
+level_2.add_platform(600, 450, 300, 100, 5, 0, 0)
+level_2.add_platform(1000, 350, 300, 100, 7, 0, 0)
+level_2.add_platform(1350, 550, 700, 100, 3, 0, 0)
+level_2.add_platform(1750, 550, 700, 100, 3, 0, 0)
+level_2.add_platform(1500, 250, 700, 100, 10, 0, 0)
+
+# Цель уровня
+level_2.set_goal(2000, 200)
 
 game.levels.append(level_2)
+
